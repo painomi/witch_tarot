@@ -10,13 +10,13 @@ describe WitchTarot, "ウィッチ・タロー" do
 		
 		context '引数なしの場合' do
 			it '1D6+1文字の名前を生成' do
-				WitchTarot::name.should== 'MIIKRI'
+				expect(WitchTarot::name).to eq('MIIKRI')
 			end
 		end
 		
 		context '文字数指定の場合' do
 			it '指定文字数の名前を生成' do
-				WitchTarot::name(7).should== 'SEAUCCO'
+				expect(WitchTarot::name(7)).to eq('SEAUCCO')
 			end
 		end
 	end
